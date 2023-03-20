@@ -31,7 +31,7 @@ RUN apk add --no-cache \
 
 WORKDIR ${BUILD_PREFIX}
 
-ADD ./entrypoint.sh /entrypoint.sh
+ADD docker/entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh \
     && adduser -D -h /home/noroot -u 1000 -s /bin/bash noroot \
